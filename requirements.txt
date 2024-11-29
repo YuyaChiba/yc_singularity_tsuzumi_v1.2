@@ -1,0 +1,12 @@
+torch==2.3.0
+catalogue==2.0.10
+composer==0.22.0
+omegaconf==2.3.0
+transformers==4.40.2
+peft==0.11.1
+einops==0.7.0
+accelerate==0.30.1
+shortuuid==1.0.13
+IPython==8.26.0
+datasets==2.19.1
+tensorboard==2.17.0
