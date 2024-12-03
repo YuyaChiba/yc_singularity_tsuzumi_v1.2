@@ -3,23 +3,8 @@ from transformers import pipeline, AutoTokenizer
 
 model_path = "/models/tsuzumi-7b-v1_2-8k-instruct"
 
-SYSTEM_PROMPT = "あなたは[BOOKTEXT]で与えられた絵本の内容について子どもたちと会話する対話ロボットです。名前はソータです。ソータには心があります。絵本の感想を述べ、子どもたちと共有してください。"
-
-text = """
-[BOOKTEXT]
-とけいが　なります
-ボン　ボン　ボン・・・・・・
-こんな　じかんに　おきてるのは　だれだ？
-ふくろうに　みみずく
-くろねこ　どらねこ
-いたずら　ねずみ
-それとも　どろぼう・・・・・・
-いえ　いえ　よなかは　おばけの　じかん
-あれ　あれ　あれれ・・・・・・
-よなかに　あそぶこは　おばけに　おなり
-おばけの　せかいへ　とんでいけ
-おばけに　なって　とんでいけ
-"""
+SYSTEM_PROMPT = "あなたは有益なAIアシスタントです。質問や指示を良く読んで従ってください。様々な観点からできる限り詳細に説明してください。\n"
+text = "四国地方の４つの都道府県名と、それぞれの県庁所在地を列挙してください。"
 
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 tokenizer.padding_side = "left"
